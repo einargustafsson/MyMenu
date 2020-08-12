@@ -2,7 +2,7 @@ export const state = () => ({
   products: [
     {
       id: 1,
-      title: 'Icelandic plate Loki 2',
+      title: 'Icelandic plate Loki',
       description: 'Rye bread slices, with mashed fish ( Plokkfiskur) & smoked trout. Flatbread with smoked lamb.Dried fish with butter and taste of fermented shark.',
       price: 2900,
       ratings: 3,
