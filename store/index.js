@@ -11,20 +11,22 @@ export const state = () => ({
       isAddedBtn: false,
       isFavourite: false,
       quantity: 1,
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670625772-J0IM4S1QRVE2EP3SMDLV/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5727.jpg?format=1500w'
+      type: 'plates',
+      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670625772-J0IM4S1QRVE2EP3SMDLV/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5727.jpg?format=500w'
     },
     {
       id: 2,
       title: 'Icelandic plate Baldur',
       description: 'Two rye bread slices, one with mashed fish & the other with egg & herring. Loki’s unique Rye bread ice cream.',
-      price: 2900,
+      price: 2400,
       ratings: 5,
       reviews: 10,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
       quantity: 1,
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670712342-W80QUV9RK41P5JB2JGCS/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5737.jpg?format=1500w'
+      type: 'plates',
+      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670712342-W80QUV9RK41P5JB2JGCS/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5737.jpg?format=500w'
     },
     {
       id: 3,
@@ -37,87 +39,116 @@ export const state = () => ({
       isAddedBtn: false,
       isFavourite: false,
       quantity: 1,
+      type: 'plates',
       imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670977993-U4BZ0RJP7B6L6HZ56Z6O/ke17ZwdGBToddI8pDm48kLRAvIOuD_BeOmvIoc2uxngUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcPqTeDH7fKPa2US_s5qbB6FQIWaMIObzCsue3bQUWeZdbZWxuQwynQ0LmYHq0RCqo/IP+l+banner.jpg?format=1500w'
     },
     {
       id: 4,
-      title: 'Product 4',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 50,
+      title: 'Icelandic plate Freyja',
+      description: 'Trout – tarte with salad. Loki’s unique rye bread ice cream.',
+      price: 2400,
       ratings: 1,
       reviews: 0,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
-      quantity: 1
+      quantity: 1,
+      type: 'plates',
+      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551671692091-ZDDYXYXGFZ19XMW0BTP3/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5747.jpg?format=500w'
     },
     {
       id: 5,
-      title: 'Product 5',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 35,
+      title: 'Gratinated mashed fish',
+      description: 'With rye bread and salad.',
+      price: 2500,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
-      quantity: 1
+      quantity: 1,
+      type: 'mains',
+      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1550988829598-T1YPOPI6V3J02IDO0N4E/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5761.jpg?format=500w'
     },
     {
       id: 6,
-      title: 'Product 6',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 110,
+      title: 'Meat soup',
+      description: 'Icelandic lamb meat soup',
+      price: 2190,
       ratings: 5,
       reviews: 1,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
-      quantity: 1
+      quantity: 1,
+      type:'mains',
+      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1550988952105-CF5VI38AQ2O9TQJEQLLR/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_kjotsupa.jpg?format=500w'
     },
     {
       id: 7,
-      title: 'Product 7',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 50,
+      title: 'Loki’s vegetarian plate',
+      description: 'Fresh greens, potatoes, quinoa, chickpeas, house sauce & rye bread ',
+      price: 2200,
       ratings: 5,
       reviews: 7,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
-      quantity: 1
+      quantity: 1,
+      type:'mains',
+      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551672218966-0YTCNE7H9B0HA73BU3MQ/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/Grænmetisréttur.jpg?format=500w'
     },
     {
       id: 8,
-      title: 'Product 8',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 35,
+      title: 'Icelandic Braveheart',
+      description: 'Brennivíns shot, rye bread & flatbread. Dried fish with butter and a bit of fermented shark.',
+      price: 2400,
       ratings: 3,
       reviews: 0,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
-      quantity: 1
+      quantity: 1,
+      type:'sides',
+      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551672107417-6LUG9PBCW6B5FZ3L1UD6/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5753.jpg?format=500w'
     },
     {
       id: 9,
-      title: 'Product 9',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      price: 110,
+      title: 'Loki’s unique Rye bread ice cream',
+      description: 'With cream & rhubarb syrup',
+      price: 850,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
       isAddedBtn: false,
       isFavourite: false,
-      quantity: 1
+      quantity: 1,
+      type:'deserts',
+      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551673975353-U3RQHAO8YR3E3PCGHOIK/ke17ZwdGBToddI8pDm48kGDpvalPb1SqHoCn1hwN0Y57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQPoRzxSr1hzN-vPBHt7YyLLXgctAyUJRqJUUGWVDK_ZzIgvsybGcZEPqUYiXY8im/Rúgbrauðs%C3%ADs%2C+Rye+bread+ice+cream.jpg?format=500w'
+    },
+    {
+      id: 10,
+      title: 'Viking beer',
+      description: 'Award winning Icelandic brew',
+      price: 1150,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'drinks',
+      imgURL:'https://www.dutyfree.is/media/1/118-2230-1.jpg?maxwidth=568&maxheight=490'
     }
   ],
   userInfo: {
     isLoggedIn: false,
     isSignedUp: false,
     hasSearched: false,
+    hasFiltered: false,
     name: '',
-    productTitleSearched: ''
+    productTitleSearched: '',
+    productTagFiltered: ''
   },
   systemInfo: {
     openLoginModal: false,
@@ -199,11 +230,19 @@ export const mutations = {
   setHasUserSearched: (state, hasSearched) => {
     state.userInfo.hasSearched = hasSearched;
   },
+  setHasUserFiltered: (state, hasFiltered) => {
+    state.userInfo.hasFiltered = hasFiltered;
+  },
   setUserName: (state, name) => {
     state.userInfo.name = name;
   },
   setProductTitleSearched: (state, titleSearched) => {
     state.userInfo.productTitleSearched = titleSearched;
+    console.log('setProductTitleSearch');
+  },
+  setProductTagFiltered: (state, tagFiltered) => {
+    state.userInfo.productTagFiltered = tagFiltered;
+    console.log('setProductTagFiltered');
   },
   showLoginModal: (state, show) => {
     state.systemInfo.openLoginModal = show;

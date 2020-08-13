@@ -9,9 +9,11 @@
 			<section class="modal-card-body">
 				<div v-if="!isCheckoutSection">
 					<div class="box" v-for="product in products" :key="product.id">
-						<button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button>
-						<p>{{ product.title }}  {{ product.quantity > 0 ?  ` - Quantity: ${product.quantity}` : ''}}</p>
-						<p>{{ product.price }} &euro;</p>
+						
+						<p>{{ product.title }}</p>
+						<p>{{ product.quantity > 0 ?  `Quantity: ${product.quantity}` : ''}}</p>
+						<p>ISK {{ product.price }} <button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button></p>
+						
 					</div>
 					<div v-if="products.length === 0">
 						<p>{{ cartEmptyLabel }}</p>
@@ -21,10 +23,12 @@
 					<p>You bought it :-)</p>
 				</div>
 			</section>
+			
 			<footer class="modal-card-foot">
-				<button v-show="products.length > 0 && !isCheckoutSection" class="button is-success" @click="onNextBtn">{{ buyLabel }}</button>
+				<h3 v-show="products.length > 0 && !isCheckoutSection" class=" is-success" @click="onNextBtn">{{ buyLabel }}</h3>
 				<button v-if="isCheckoutSection" class="button is-success" @click="closeModal(true)">{{ closeLabel }}</button>
 			</footer>
+			
 		</div>
 	</div>
 </template>
@@ -35,8 +39,8 @@ export default {
     
 	data () {
 		return {
-			modalTitle: 'Checkout',
-			removeLabel: 'Remove from cart',
+			modalTitle: 'Your order',
+			removeLabel: 'Remove',
 			cartEmptyLabel: 'Your cart is empty',
 			closeLabel: 'Close',
 			isCheckoutSection: false
@@ -74,11 +78,12 @@ export default {
 				finalPrice = pricesArray.reduce((a, b) => a + b, 0); // sum the prices
 				
 				if (totalProducts > 1) { // set plural or singular
-					productLabel = 'products';
+					productLabel = 'orders';
 				} else {
-					productLabel = 'product';
+					productLabel = 'order';
 				}
-				return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;
+				//return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;
+				return `Total of ${totalProducts} ${productLabel} at ISK ${finalPrice}`;
 		},
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;

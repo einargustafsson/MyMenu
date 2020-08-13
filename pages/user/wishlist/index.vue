@@ -15,6 +15,7 @@
 <script>
 import VmProductsList from '@/components/Products';
 import { getByTitle } from '@/assets/filters';
+import { getByTag } from '@/assets/tags';
 
 export default {
 	name: 'user-wishlist',
@@ -32,6 +33,9 @@ export default {
     productsInWishlist () {
       if (this.$store.state.userInfo.hasSearched) {
         return this.getProductByTitle();
+      } else if(this.$store.state.userInfo.hasFiltered) {
+        console.log('has filter');
+        return this.getProductByTag();
       } else {
         return this.$store.getters.productsAddedToFavourite;
       }
@@ -44,6 +48,12 @@ export default {
           titleSearched = this.$store.state.userInfo.productTitleSearched;
       
       return this.productsFiltered = getByTitle(listOfProducts, titleSearched);
+    },
+    getProductByTag () {
+      let listOfProducts = this.$store.getters.productsAddedToFavourite,
+          tagSearched = this.$store.state.userInfo.productTagFiltered;
+      
+      return this.productsFiltered = getByTag(listOfProducts, tagSearched);
     }
   }
 }

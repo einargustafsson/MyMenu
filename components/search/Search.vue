@@ -37,6 +37,7 @@ export default {
 			if (value.length > 0) {
 				this.$store.commit('setHasUserSearched', true);
 				this.$store.commit('setProductTitleSearched', value);
+				console.log('search()');
 			} else {
 				this.$store.commit('setHasUserSearched', false);
 				this.$store.commit('setProductTitleSearched', '');

@@ -12,6 +12,7 @@
 <script>
 import VmProducts from '../Products';
 import { getByTitle } from '@/assets/filters';
+import { getByTag } from '@/assets/tags';
 
 export default {
   name: 'productsList',
@@ -30,6 +31,8 @@ export default {
     products () {
       if (this.$store.state.userInfo.hasSearched) {
         return this.getProductByTitle();
+      } else if(this.$store.state.userInfo.hasFiltered) {
+        return this.getProductByTag();
       } else {
         return this.$store.state.products;
       }
@@ -40,8 +43,12 @@ export default {
     getProductByTitle () {
       let listOfProducts = this.$store.state.products,
           titleSearched = this.$store.state.userInfo.productTitleSearched;
-      
       return this.productsFiltered = getByTitle(listOfProducts, titleSearched);
+    },
+    getProductByTag () {
+      let listOfProducts = this.$store.state.products,
+          tagSearched = this.$store.state.userInfo.productTagFiltered;
+      return this.productsFiltered = getByTag(listOfProducts, tagSearched);
     }
   }
 

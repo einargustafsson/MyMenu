@@ -1,11 +1,9 @@
 <template>
   <div class="footer">
     <div class="columns container">
-      <div class="column">
-        <p>Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.</p>
-      </div>
+      
     <div class="column has-text-right">
-      <p>Vuemmerce | Made with ❤</p>
+      <p>Get a touch free mobile menu on MyMenu.is</p>
     </div>
     </div>
   </div>

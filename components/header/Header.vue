@@ -18,6 +18,7 @@
         <div class="navbar-start">
           <div class="navbar-item field">
             <VmSearch></VmSearch>
+            <VmFilter></VmFilter>
           </div>
         </div>
         
@@ -31,6 +32,7 @@
 <script>
   
   import VmSearch from '../search/Search';
+  import VmFilter from '../filter/Tags';
 
   export default {
     name: 'VmHeader',
@@ -47,7 +49,8 @@
     },
 
     components: {
-      VmSearch
+      VmSearch,
+      VmFilter
     },
 
     computed: {
@@ -66,7 +69,7 @@
 
 <style lang="scss" scoped>
   .navbar {
-    position: fixed;
+    
     width: 100%;
   }
   .title {
@@ -81,6 +84,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    position: fixed;
   }
   a {
     color: grey;
