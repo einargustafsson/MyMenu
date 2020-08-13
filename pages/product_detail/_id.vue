@@ -1,67 +1,35 @@
 <template>
   <div class="section">
     <div class="card is-clearfix columns">
-        <figure class="card-image is-480x480 column is-one-thirds">
-          <img src="https://bulma.io/images/placeholders/480x480.png">
+        <figure class="card-image is-one-thirds">
+          <img :src="product.imgURL" alt="Placeholder image">
         </figure>
         <div class="card-content column is-two-thirds">
           <div class="card-content__title">
             <h2 class="title is-4">{{ product.title }}
-              <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
-                <span class="icon is-small">
-                  <i class="fa fa-heart"></i>
-                </span>
-              </button>
-              <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
-                <span class="icon is-small">
-                  <i class="fa fa-heart-o"></i>
-                </span>
-              </button>
+              
             </h2>
           </div>
           <div class="card-content__text">
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud
-            </p>
+            <p>{{ product.description }}</p>
           </div>
-          <div class="card-content__ratings" v-if="product.rating === 1">
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 2">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 3">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 4">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
+         
           <div class="card-content__reviews">
-            <div class="is-pulled-left">
-              <p><strong>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</strong></p>
-            </div>
+            <!--
             <div class="select is-rounded is-small is-pulled-right">
               <select @change="onSelectQuantity(product.id)" v-model="selected">
                 <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
               </select>
             </div>
+            -->
+            <div class="selector is-rounded is-small">
+              <button class="button remove-from-cart" @click="removeFromCart(product.id, false)">-</button>
+              <input class="counter" v-model="product.quantity" disabled />
+              <button class="button add-to-cart" @click="addToCart(product.id)">+</button>
+            </div>
           </div>
           <div class="card-content__price is-pulled-left">
-            <span class="title is-3"><strong>{{ product.price }}&euro;</strong></span>
+            <span class="title is-4"><strong> ISK {{ product.price }}</strong></span>
           </div>
           <div class="card-content__btn is-pulled-right">
             <button class="button is-primary" v-if="!isAddedBtn" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
@@ -80,15 +48,31 @@ export default {
     return /^\d+$/.test(params.id)
   },
   
+  props: {
+
+    value: {
+      default: 0,
+      type: Number
+    },
+    min: {
+      default: 0,
+      type: Number
+    },
+    max: {
+      default: undefined,
+      type: Number
+    }
+  },
   data () {
     return {
-      addToCartLabel: 'Add to cart',
-      removeFromCartLabel: 'Remove from cart',
+      addToCartLabel: 'Add',
+      removeFromCartLabel: 'Remove',
       addToFavouriteLabel: 'Add to favourite',
       removeFromFavouriteLabel: 'Remove from favourite',
       product: {},
       selected: 1,
-      quantityArray: []
+      quantityArray: [],
+      newValue: 0
     };
   },
 
@@ -111,7 +95,8 @@ export default {
     addToCart (id) {
       let data = {
         id: id,
-        status: true
+        status: true,
+        quantity: this.newValue + 1
       }
       this.$store.commit('addToCart', id);
       this.$store.commit('setAddedBtn', data);
@@ -119,10 +104,18 @@ export default {
     removeFromCart (id) {
       let data = {
         id: id,
-        status: false
+        status: false,
+        quantity: this.newValue - 1
       }
       this.$store.commit('removeFromCart', id);
       this.$store.commit('setAddedBtn', data);
+      if ((this.newValue) > this.min) {
+        this.newValue = this.newValue - 1;
+        this.$store.commit('quantity', data);
+      }
+      if((this.newValue) == 0) {
+        this.$store.commit('removeFromCart', id);
+      }
     },
     onSelectQuantity (id) {
       let data = {
@@ -160,5 +153,24 @@ export default {
       margin-bottom: 10px;
     }
   }
+  .card {
+    box-shadow :none;
+    -webkit-box-shadow: none;
+  }
+  .counter {
+      width:50px;
+      text-align:center;
+      font-size:15px;
+      padding:3px;
+      border:none;
+      background: #fff;
+      margin-top: 5px;
+      color: #333;
+  }
+  .selector {
+   position: absolute;
+   right: 15px;
+   bottom: 25px;
+ }
 </style>
 

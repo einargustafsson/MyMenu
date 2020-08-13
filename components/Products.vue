@@ -36,6 +36,7 @@
         </div>
       </div>
     </div>
+    <!--
     <nuxt-link
       class="details"
       :to="{
@@ -51,6 +52,7 @@
       }"
     >
     </nuxt-link>
+    -->
   </div>
 </template>
 
