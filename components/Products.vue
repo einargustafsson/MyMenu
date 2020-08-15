@@ -2,34 +2,35 @@
   <div>
     <div class="card-image">
       <figure class="image ">
-        <img :src="product.imgURL" alt="Placeholder image">
+        <img :src="product.imgURL" :alt="product.title">
       </figure>
+      <p class="is-pulled-right price">
+          <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
+        </p>
     </div>
     <div class="card-content">
       <div class="media">
-        <div class="media-content">
+        <div class="">
           <h2 class="title is-4">{{ product.title }}</h2>
         </div>
-        
       </div>
       <div class="content is-clearfix">
         <p>{{ product.description }}</p>
-        <p class="is-pulled-right">
-          <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
-        </p>
+        
       </div>
       <div class="card-footer btn-actions">
         <div class="card-footer-item field is-grouped">
-          
           <div class="buttons">
-            <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
+            <!--
+            <button class="button is-primary add-to-order" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
             <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
-            
-            
+            -->
           </div>
            <div class="selector is-rounded is-small">
             <button class="button remove-from-cart" @click="removeFromCart(product.id, false)">-</button>
-            <input class="counter" v-model="newValue" disabled />
+            <span class="counter-container">
+              <input class="counter" v-model="newValue" disabled />
+            </span>
             <button class="button add-to-cart" @click="addToCart(product.id)">+</button>
           </div>
            
@@ -175,33 +176,50 @@ export default {
     }
  }
  .counter {
-      width:50px;
+      width:100%;
       text-align:center;
-      font-size:15px;
+      font-size:18px;
+      font-weight: bold;
       padding:3px;
       border:none;
       background: #fff;
       margin-top: 5px;
-      color: #333;
+      color: #209cee;
   }
  .button,
  .selector {
    z-index: 2;
  }
  .selector {
-   position: absolute;
-   right: 15px;
-   bottom: 25px;
+   display: flex; justify-content: flex-end; width: 100%}
+ .selector button {background-color: #209cee; color: white; margin: 0; font-weight: bold; font-size: 18px;}
+ .selector button ,
+  .selector .counter-container {
+      flex: 1;
+  }
+
+ .price {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px;
+    padding: 10px;
+    background: #fc0;
+    border-radius: 5px 0 0 5px;
+    opacity: 0.8;
+}
+.card-content {padding: 0.5rem 1rem;}
+ .card-content h2, .card-content p{
+   padding: 0 15px;
  }
- .card-content {
-   padding: 0;
- }
+
  .buttons {
    margin: 0;
  }
  h2 {
    margin-top: 20px;
  }
+ .card .media {margin-bottom: 0.5rem;}
+ .add-to-order {background-color: #209cee;}
 </style>
 
 

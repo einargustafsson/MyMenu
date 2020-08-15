@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .card {
-    margin: 10px;
-  }
+  .card {padding: 0;}
+ 
+ 
 </style>
