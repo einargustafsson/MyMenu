@@ -76,6 +76,7 @@ export default {
   .control {
     width: 95%;
   }
+  .tabs.is-toggle a:hover,
   .active {
 	  background: #209cee;
 	  color: white;
