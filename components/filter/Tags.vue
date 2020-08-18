@@ -77,7 +77,7 @@ export default {
     width: 95%;
   }
   .active {
-	  background: blue;
+	  background: #209cee;
 	  color: white;
   }
   .tabs {margin: 15px 0 0px 0}

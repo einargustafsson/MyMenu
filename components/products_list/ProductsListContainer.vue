@@ -56,7 +56,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .card {padding: 0;}
- 
- 
+  .card {
+    padding: 0;
+    border-bottom: 2px solid #209cee;
+  }
+ .columns {margin: 0;}
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="card-image">
-      <figure class="image ">
-        <img :src="product.imgURL" :alt="product.title">
+      <figure class="image" v-if="product.imgURL != ''">
+        <img :src="product.imgURL">
       </figure>
-      <p class="is-pulled-right price">
+      <p class="is-pulled-right price" v-if="product.price != ''">
           <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
         </p>
     </div>
@@ -207,17 +207,23 @@ export default {
     border-radius: 5px 0 0 5px;
     opacity: 0.8;
 }
-.card-content {padding: 0.5rem 1rem;}
- .card-content h2, .card-content p{
+.card-content {
+  padding: 0.5rem 1rem;
+}
+.card-content h2, .card-content p{
    padding: 0 15px;
  }
 
  .buttons {
    margin: 0;
  }
- h2 {
-   margin-top: 20px;
- }
+
+.card-image {
+  min-height: 80px;
+}
+.image img {
+  margin-bottom: 20px;
+}
  .card .media {margin-bottom: 0.5rem;}
  .add-to-order {background-color: #209cee;}
 </style>
