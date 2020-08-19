@@ -201,7 +201,7 @@ export default {
  .price {
     position: absolute; 
     bottom: 10px; 
-    right: 10px;
+    right: 0px;
     padding: 10px;
     background: #fc0;
     border-radius: 5px 0 0 5px;

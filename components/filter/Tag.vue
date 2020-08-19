@@ -38,11 +38,31 @@ computed: {
         }
     },
     toggleClass: function() {
-        var actives = document.getElementsByClassName ("active");
+
+         var actives = document.getElementsByClassName ("active");
         for (var i=0; i<actives.length; i++) {
             actives[i].className = "notactive";
+            
         }
-      this.isActive = !this.isActive;
+        this.isActive = !this.isActive;
+        /*
+        if(!this.isActive){
+            console.log('this button was not active');
+            var actives = document.getElementsByClassName ("active");
+            for (var i=0; i<actives.length; i++) {
+                actives[i].className = "notactive";
+                
+            }
+            this.isActive = !this.isActive;
+        } else {
+            console.log('this button was active');
+            this.$store.commit('setHasUserFiltered', false);
+            this.$store.commit('setProductTagFiltered', '');
+            this.isActive = !this.isActive;
+        }
+        console.log("this status is now: " + this.isActive);
+        */
+            
     }
   }
 }

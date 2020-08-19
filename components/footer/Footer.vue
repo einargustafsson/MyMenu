@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="columns container">
       
-    <div class="column has-text-right">
+    <div class="column has-text-center">
       <p>Get a touch free mobile menu on MyMenu.is</p>
     </div>
     </div>
@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
  .footer {
-   background: #b9e2fc;
-   color: black;
+   background: #209cee;
+   color: #fff;
  }
 </style>

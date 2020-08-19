@@ -11,8 +11,9 @@
 					<div class="box" v-for="product in products" :key="product.id">
 						
 						<p>{{ product.title }}</p>
-						<p>{{ product.quantity > 0 ?  `Quantity: ${product.quantity}` : ''}}</p>
-						<p>ISK {{ product.price }} <button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button></p>
+						<p>{{ product.quantity > 0 ?  `Orders: ${product.quantity}` : ''}}</p>
+						<p>ISK {{ product.price }} </p>
+						<button class="button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button>
 						
 					</div>
 					<div v-if="products.length === 0">
@@ -83,7 +84,8 @@ export default {
 					productLabel = 'order';
 				}
 				//return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;
-				return `Total of ${totalProducts} ${productLabel} at ISK ${finalPrice}`;
+				//return `Total of ${totalProducts} ${productLabel} at ISK ${finalPrice}`;
+				return `Total of ISK ${finalPrice}`;
 		},
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;
@@ -121,3 +123,19 @@ export default {
 }
 </script>
 
+<style lang="scss" scoped>
+  .modal-card {
+    width: 95%;
+  }
+  .modal-card-foot {
+    justify-content: flex-end;
+  }
+  .box {
+	  position: relative;
+	  button {
+		  position: absolute;
+		  right: 5px;
+		  top: 0;
+	  }
+  }
+  </style>

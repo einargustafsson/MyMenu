@@ -180,7 +180,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:''
+      imgURL:'/images/Loki_rugbraud_plokkfisk.jpg'
     },
     {
       id: 14,
@@ -194,7 +194,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:''
+      imgURL:'/images/Loki_rugbraud_kaefu.jpg'
     },
     {
       id: 15,
@@ -306,7 +306,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/kleina.jpg'
     },
     {
       id: 23,
@@ -320,12 +320,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/astarpungar.jpg'
     },
     {
       id: 24,
-      title: 'One Pancake with sugar',
-      description: '',
+      title: 'Pancake with sugar',
+      description: 'Get two for 400',
       price: '250',
       ratings: 4,
       reviews: 2,
@@ -334,23 +334,8 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_ponnukokur_m_sykri.jpg'
     },
-    {
-      id: 25,
-      title: 'Two Pancakes with sugar',
-      description: '',
-      price: '400',
-      ratings: 4,
-      reviews: 2,
-      isAddedToCart: false,
-      isAddedBtn: false,
-      isFavourite: false,
-      quantity: 1,
-      type:'Pastry',
-      imgURL:''
-    },
-
     {
       id: 26,
       title: 'Pancake with cream & jam',
@@ -363,7 +348,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_ponnukaka_m_rjoma_sultu.jpg'
     },
     {
       id: 27,
@@ -377,7 +362,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/ponnukaka.jpg'
     },
     {
       id: 28,
@@ -391,7 +376,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_ponnukokuveisla.jpg'
     },
     {
       id: 29,
@@ -405,7 +390,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/gulrotarkaka.jpg'
     },
     {
       id: 30,
@@ -419,7 +404,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_skyrkaka.jpg'
     },
     {
       id: 31,
@@ -433,7 +418,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_sukkuladikaka.jpg'
     },
     {
       id: 32,
@@ -447,7 +432,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_hollustukaka.jpg'
     },
     {
       id: 33,
@@ -461,12 +446,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:''
+      imgURL:'/images/Loki_skyr_m_rjomablandi.jpg'
     },
     {
       id: 40,
-      title: 'Viking beer 5,6% - 33cl',
-      description: 'Award winning Icelandic Lager',
+      title: 'Viking beer bottle',
+      description: ' 5,6% - 33clAward winning Icelandic Lager',
       price: 1050,
       ratings: 4,
       reviews: 2,
@@ -475,13 +460,27 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:'https://www.dutyfree.is/media/1/118-2230-1.jpg?maxwidth=568&maxheight=490'
+      imgURL:'/images/viking.jpg'
     },
     {
       id: 41,
-      title: 'Thule beer 5% - 50cl',
-      description: 'Award winning Icelandic Lager',
-      price: 1150,
+      title: 'Thule beer',
+      description: ' 5% - 33cl',
+      price: 950,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Alcohol',
+      imgURL:'/images/thule-draft.jpg'
+    },
+    {
+      id: 49,
+      title: 'Viking light',
+      description: ' 4.4 % gluten free',
+      price: 950,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -493,9 +492,9 @@ export const state = () => ({
     },
     {
       id: 42,
-      title: 'Loki Laufeyjarson 5,4% 33 cl',
-      description: '',
-      price: 1150,
+      title: 'Loki Laufeyjarson',
+      description: '5,4% 33 cl',
+      price: 1200,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -503,13 +502,41 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/loki-beer.jpg'
+    },
+    {
+      id: 70,
+      title: 'Viking lager small draft',
+      description: 'draft 33 cl',
+      price: 750,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Alcohol',
+      imgURL:'/images/thule-draft.jpg'
+    },
+    {
+      id: 71,
+      title: 'Viking lager large draft',
+      description: 'draft 50 cl',
+      price: 900,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Alcohol',
+      imgURL:'/images/thule-draft.jpg'
     },
     {
       id: 43,
-      title: 'Einstök White Ale 5,2% - 33 cl',
-      description: 'Award winning Icelandic Lager',
-      price: 1200,
+      title: 'Einstök White Ale',
+      description: '5,2% - 33 cl',
+      price: 1250,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -517,13 +544,13 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/einstok.jpg'
     },
     {
       id: 44,
-      title: 'Einstök Pale Ale 5,6% - 33cl',
-      description: '',
-      price: 1200,
+      title: 'Einstök Pale Ale',
+      description: ' 5,6% - 33cl',
+      price: 1250,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -531,13 +558,13 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/einstok.jpg'
     },
     {
       id: 45,
-      title: 'Einstök Toasted Porter 6% - 33c',
+      title: 'Einstök Toasted Porter',
       description: '',
-      price: 1200,
+      price: 1250,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -545,12 +572,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/einstok.jpg'
     },
     {
       id: 46,
-      title: 'Faustino VII Red or White 18,7 cl glass',
-      description: '',
+      title: 'Glass of wine ',
+      description: 'Faustino VII - Red or White 18,7 cl glass',
       price: 1200,
       ratings: 4,
       reviews: 2,
@@ -559,12 +586,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/faustino-glass.jpg'
     },
     {
       id: 47,
-      title: 'Faustino VII Red or White 70 cl bottle',
-      description: '',
+      title: 'Bottle of wine',
+      description: 'Faustino VII Red or White 70 cl bottle',
       price: 4500,
       ratings: 4,
       reviews: 2,
@@ -573,12 +600,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/faustino-bottle.jpg'
     },
     {
       id: 48,
-      title: 'Brennivín 3 cl',
-      description: 'Icelandic shot',
+      title: 'Brennivín',
+      description: 'Icelandic shot - 3 cl',
       price: 1000,
       ratings: 4,
       reviews: 2,
@@ -587,12 +614,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/brennivin.jpg'
     },
     {
       id: 50,
-      title: 'Birkir/Björk/Reyka vodka 4 cl',
-      description: 'Icelandic shot ',
+      title: 'Birkir, Björk or Reyka vodka ',
+      description: 'Icelandic shot - 4 cl',
       price: 1300,
       ratings: 4,
       reviews: 2,
@@ -601,7 +628,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/reyka.jpg'
     },
     {
       id: 51,
@@ -657,12 +684,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Alcohol',
-      imgURL:''
+      imgURL:'/images/irish.jpg'
     },
     {
       id: 55,
-      title: 'Tea, good selection'	,
-      description: '',
+      title: 'Tea',
+      description: 'English Breakfast, Earl Grey, Lemon, Green Te, Super Berries, Ginger peach Tea, Black Tea Chai,Chocolate Rooibos & vanilla, Black Tea & Ginger with Peach, Chamomile, Lemongrass ginger &citrus',
       price: 450,
       ratings: 4,
       reviews: 2,
@@ -671,12 +698,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Drinks',
-      imgURL:''
+      imgURL:'/images/tea.jpg'
     },
     {
       id: 56,
-      title: 'Loki Te : Icelandic herbal tea'	,
-      description: '',
+      title: 'Loki Te'	,
+      description: 'Icelandic herbal tea',
       price: 500,
       ratings: 4,
       reviews: 2,
@@ -690,7 +717,7 @@ export const state = () => ({
     {
       id: 57,
       title: 'Regular coffee'	,
-      description: '',
+      description: 'Comes with a refill',
       price: 450,
       ratings: 4,
       reviews: 2,
@@ -699,7 +726,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Drinks',
-      imgURL:''
+      imgURL:'/images/coffee.jpg'
     },
     {
       id: 58,
@@ -713,7 +740,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Drinks',
-      imgURL:''
+      imgURL:'/images/espresso.jpg'
     },
     {
       id: 59,
@@ -741,13 +768,55 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Drinks',
-      imgURL:''
+      imgURL:'/images/cappuccino.jpg'
     },
     {
       id: 61,
-      title: 'Caffe Latte'	,
+      title: 'Cafe latte'	,
       description: '',
       price: 580,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Drinks',
+      imgURL:'/images/latte.jpg'
+    },
+    {
+      id: 73,
+      title: 'Soy or Oat latte'	,
+      description: '',
+      price: 650,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Drinks',
+      imgURL:'/images/latte.jpg'
+    },
+    {
+      id: 74,
+      title: 'Flat white'	,
+      description: '',
+      price: 650,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Drinks',
+      imgURL:'/images/flatwhite.jpg'
+    },
+    {
+      id: 75,
+      title: 'Hot Chocolate w/cream'	,
+      description: '',
+      price: 600,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -758,7 +827,7 @@ export const state = () => ({
       imgURL:''
     },
     {
-      id: 61,
+      id: 62,
       title: 'Swiss Mocha'	,
       description: '',
       price: 650,
@@ -772,7 +841,7 @@ export const state = () => ({
       imgURL:''
     },
     {
-      id: 62,
+      id: 63,
       title: 'Fruit juice'	,
       description: 'Orange, Apple, Tropical',
       price: 350,
@@ -783,10 +852,10 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Drinks',
-      imgURL:''
+      imgURL:'/images/juice.jpg'
     },
     {
-      id: 63,
+      id: 64,
       title: 'Milk glass'	,
       description: '',
       price: 250,
@@ -800,9 +869,9 @@ export const state = () => ({
       imgURL:''
     },
     {
-      id: 64,
-      title: 'Soda 33 cl'	,
-      description: 'Cola, Cola Zero, Sprite, Appelsín',
+      id: 65,
+      title: 'Soda / Soft drink'	,
+      description: 'Cola, Cola Zero, Sprite, Appelsín - 33 cl',
       price: 450,
       ratings: 4,
       reviews: 2,
@@ -811,12 +880,12 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Drinks',
-      imgURL:''
+      imgURL:'/images/appelsin.jpg'
     },
     {
-      id: 65,
-      title: 'Sparkling water 33 cl'	,
-      description: 'Cola, Cola Zero, Sprite, Appelsín',
+      id: 66,
+      title: 'Sparkling water '	,
+      description: 'Icelandic Water - 33 cl',
       price: 350,
       ratings: 4,
       reviews: 2,
@@ -828,23 +897,9 @@ export const state = () => ({
       imgURL:''
     },
     {
-      id: 66,
-      title: 'Pilsner 2,2% 33 cl'	,
-      description: '',
-      price: 550,
-      ratings: 4,
-      reviews: 2,
-      isAddedToCart: false,
-      isAddedBtn: false,
-      isFavourite: false,
-      quantity: 1,
-      type:'Drinks',
-      imgURL:''
-    },
-    {
       id: 67,
-      title: 'Malt 2,2% 33 cl'	,
-      description: '',
+      title: 'Pilsner (light beer)'	,
+      description: '2,2% 33 cl',
       price: 550,
       ratings: 4,
       reviews: 2,
@@ -857,6 +912,20 @@ export const state = () => ({
     },
     {
       id: 68,
+      title: 'Malt'	,
+      description: '2,2% 33 cl',
+      price: 550,
+      ratings: 4,
+      reviews: 2,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Drinks',
+      imgURL:'/images/malt.jpg'
+    },
+    {
+      id: 69,
       title: 'Hot chocolate with cream'	,
       description: '',
       price: 600,
