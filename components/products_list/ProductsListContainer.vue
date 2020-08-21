@@ -1,5 +1,6 @@
 <template>
   <div class="columns is-centered is-multiline">
+    <p class="intro">You can add items to the cart and then we'll come and take your order</p>
     <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
       <VmProducts :product="product"></VmProducts>
     </div>
@@ -61,4 +62,5 @@ export default {
     border-bottom: 2px solid #209cee;
   }
  .columns {margin: 0;}
+ .intro {padding: 10px 20px; text-align: center;}
 </style>
