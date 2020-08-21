@@ -4,6 +4,9 @@
       <figure class="image" v-if="product.imgURL != ''">
         <img :src="product.imgURL">
       </figure>
+      <figure class="image" v-else>
+        <img src="/images/default.jpg">
+      </figure>
       <p class="is-pulled-right price" v-if="product.price != ''">
           <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
         </p>

@@ -4,7 +4,7 @@ export const state = () => ({
       id: 1,
       title: 'Icelandic plate Loki',
       description: 'Rye bread slices, with mashed fish ( Plokkfiskur) & smoked trout. Flatbread with smoked lamb.Dried fish with butter and taste of fermented shark.',
-      price: 2900,
+      price: 3300,
       ratings: 3,
       reviews: 5,
       isAddedToCart: false,
@@ -32,7 +32,7 @@ export const state = () => ({
       id: 3,
       title: 'Icelandic plate Þór',
       description: 'Rye bread slices, with mashed fish ( Plokkfiskur) & smoked trout. Flatbread with sheep-head jelly, mashed turnips and bean salad.',
-      price: 2900,
+      price: 3300,
       ratings: 2,
       reviews: 3,
       isAddedToCart: false,
@@ -46,7 +46,7 @@ export const state = () => ({
       id: 4,
       title: 'Icelandic plate Freyja',
       description: 'Trout – tarte with salad. Loki’s unique rye bread ice cream.',
-      price: 2400,
+      price: 2700,
       ratings: 1,
       reviews: 0,
       isAddedToCart: false,
@@ -60,7 +60,7 @@ export const state = () => ({
       id: 5,
       title: 'Gratinated mashed fish',
       description: 'With rye bread and salad.',
-      price: 2500,
+      price: 2950,
       ratings: 4,
       reviews: 2,
       isAddedToCart: false,
@@ -74,7 +74,7 @@ export const state = () => ({
       id: 6,
       title: 'Meat soup',
       description: 'Icelandic lamb meat soup',
-      price: 2190,
+      price: 2200,
       ratings: 5,
       reviews: 1,
       isAddedToCart: false,
@@ -88,7 +88,7 @@ export const state = () => ({
       id: 7,
       title: 'Loki’s vegetarian plate',
       description: 'Fresh greens, potatoes, quinoa, chickpeas, house sauce & rye bread ',
-      price: 2200,
+      price: 2600,
       ratings: 5,
       reviews: 7,
       isAddedToCart: false,
@@ -116,7 +116,7 @@ export const state = () => ({
       id: 9,
       title: 'Dish of the day',
       description: 'Fresh fish or hearty meat served with the right condiments for a well balanced and nutritious meal. As always honoring our heritage and quest for quality.',
-      price: '',
+      price: '2100',
       ratings: 3,
       reviews: 0,
       isAddedToCart: false,
@@ -534,8 +534,8 @@ export const state = () => ({
     },
     {
       id: 43,
-      title: 'Einstök White Ale',
-      description: '5,2% - 33 cl',
+      title: 'Einstök Micro Brew 33 cl',
+      description: 'White Ale (5,2%), Pale Ale (5,6%), Toasted Porter()',
       price: 1250,
       ratings: 4,
       reviews: 2,
@@ -546,7 +546,7 @@ export const state = () => ({
       type:'Alcohol',
       imgURL:'/images/einstok.jpg'
     },
-    {
+    /*{
       id: 44,
       title: 'Einstök Pale Ale',
       description: ' 5,6% - 33cl',
@@ -573,7 +573,7 @@ export const state = () => ({
       quantity: 1,
       type:'Alcohol',
       imgURL:'/images/einstok.jpg'
-    },
+    },*/
     {
       id: 46,
       title: 'Glass of wine ',
@@ -923,21 +923,7 @@ export const state = () => ({
       quantity: 1,
       type:'Drinks',
       imgURL:'/images/malt.jpg'
-    },
-    {
-      id: 69,
-      title: 'Hot chocolate with cream'	,
-      description: '',
-      price: 600,
-      ratings: 4,
-      reviews: 2,
-      isAddedToCart: false,
-      isAddedBtn: false,
-      isFavourite: false,
-      quantity: 1,
-      type:'Drinks',
-      imgURL:''
-    }    
+    }
   ],
   userInfo: {
     isLoggedIn: false,
