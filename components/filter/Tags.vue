@@ -1,5 +1,5 @@
 <template>
-	<div class="tabs is-toggle is-toggle-rounded">
+	<div class="is-toggle is-toggle-rounded">
 		<ul>
 			 
 			<li><a @click="filterByTag(''); toggleClass()" class="active" :class="[isActive ? 'active' : 'notactive']">All</a></li>	
@@ -82,4 +82,18 @@ export default {
 	  color: white;
   }
   .tabs {margin: 15px 0 0px 0}
+  .is-toggle ul {
+    display: flex;
+    flex-wrap: wrap;
+    height: 65px;
+    margin: 20px 0px 10px 0;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+/*
+.is-toggle li {display: inline-block; margin: 0px}
+*/
+.is-toggle li {padding: 0; margin: 0 10px 10px 0;border: 1px solid #209cee;border-radius: 5px; }
+.is-toggle li a {padding: 5px 15px;    text-align: center; display: block;}
+
   </style>

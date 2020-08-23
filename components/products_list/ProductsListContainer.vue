@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-centered is-multiline">
-    <p class="intro">You can add items to the cart and then we'll come and take your order</p>
+    <p class="intro">Add the items you want to the cart <br> We'll come and take your order</p>
     <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
       <VmProducts :product="product"></VmProducts>
     </div>
@@ -54,6 +54,8 @@ export default {
   }
 
 };
+
+
 </script>
 
 <style lang="scss" scoped>
