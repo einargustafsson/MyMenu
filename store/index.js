@@ -115,7 +115,7 @@ export const state = () => ({
     {
       id: 9,
       title: 'Boiled fish',
-      description: 'Fresh fish served with the right condiments for a well balanced and nutritious meal. As always honoring our heritage and quest for quality.',
+      description: 'Steamed cod, with a light drissle of salt and pepper. Served with boiled potates and fresh salad.',
       price: '2100',
       ratings: 3,
       reviews: 0,
@@ -1050,11 +1050,11 @@ export const mutations = {
   },
   setProductTitleSearched: (state, titleSearched) => {
     state.userInfo.productTitleSearched = titleSearched;
-    console.log('setProductTitleSearch');
+    //console.log('setProductTitleSearch');
   },
   setProductTagFiltered: (state, tagFiltered) => {
     state.userInfo.productTagFiltered = tagFiltered;
-    console.log('setProductTagFiltered');
+    //console.log('setProductTagFiltered');
   },
   showLoginModal: (state, show) => {
     state.systemInfo.openLoginModal = show;

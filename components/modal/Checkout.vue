@@ -4,10 +4,12 @@
 		<div class="modal-card">
 			<header class="modal-card-head">
 				<p class="modal-card-title">{{ modalTitle }}</p>
+				
 				<button class="delete" aria-label="close" @click="closeModal(false)"></button>
 			</header>
 			<section class="modal-card-body">
 				<div v-if="!isCheckoutSection">
+					<p class="intro">Sit tight or give us a nod and we'll come and take your order</p>
 					<div class="box" v-for="product in products" :key="product.id">
 						
 						<p>{{ product.title }}</p>
@@ -138,4 +140,5 @@ export default {
 		  top: 0;
 	  }
   }
+  .intro {text-align: center; margin-bottom: 20px;}
   </style>
