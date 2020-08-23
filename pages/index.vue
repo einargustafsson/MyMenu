@@ -1,23 +1,19 @@
 <template>
   <div>
-    
+    <VueAirtable :columns="['Name', 'Description', 'Type', 'Price']"></VueAirtable>
     <VmProductsList></VmProductsList>
   </div>
 </template>
 
 <script>
 import VmProductsList from '@/components/products_list/ProductsListContainer';
-
+import VueAirtable from '@/components/airtable/AirTable';
 
 export default {
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    };
-  },
   name: 'index',
   components: {
-    VmProductsList
+    VmProductsList,
+    VueAirtable
   }
 };
 </script>
