@@ -86,7 +86,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     height: 65px;
-    margin: 20px 0px 10px 0;
+    margin: 10px 0px 10px 0;
     justify-content: flex-start;
     align-content: stretch;
 	}
