@@ -114,8 +114,8 @@ export const state = () => ({
     },
     {
       id: 9,
-      title: 'Dish of the day',
-      description: 'Fresh fish or hearty meat served with the right condiments for a well balanced and nutritious meal. As always honoring our heritage and quest for quality.',
+      title: 'Boiled fish',
+      description: 'Fresh fish served with the right condiments for a well balanced and nutritious meal. As always honoring our heritage and quest for quality.',
       price: '2100',
       ratings: 3,
       reviews: 0,
@@ -125,6 +125,34 @@ export const state = () => ({
       quantity: 1,
       type:'Main',
       imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1550988816675-MS02CJVMRPQMGTB88H23/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5796.jpg?format=1000w'
+    },
+    {
+      id: 77,
+      title: 'Fried fish',
+      description: 'Panfried cod with roasted garlic potatoes and coleslaw salad cocktail sauce and lemon',
+      price: '2100',
+      ratings: 3,
+      reviews: 0,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Main',
+      imgURL:'/images/fish.jpg'
+    },
+    {
+      id: 76,
+      title: 'Lamb shank',
+      description: 'Slow roast Icelandic lamb shank, roasted vegatables and buttered potatoes, rich gravy to top it off.',
+      price: '2750',
+      ratings: 3,
+      reviews: 0,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Main',
+      imgURL:'/images/lamb.jpg'
     },
     {
       id: 10,
