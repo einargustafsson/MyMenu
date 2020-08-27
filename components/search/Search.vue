@@ -1,5 +1,5 @@
 <template>
-	<p class="control has-icons-left">
+	<div class="control has-icons-left">
 		<input
 			class="input is-rounded"
 			type="text"
@@ -10,7 +10,7 @@
 		<span class="icon is-small is-left">
 			<i class="fa fa-search"></i>
 		</span>
-	</p>
+	</div>
 </template>
 
 <script>
@@ -50,5 +50,6 @@ export default {
 <style lang="scss" scoped>
   .control {
     width: 95%;
+	margin-top: 10px;
   }
   </style>

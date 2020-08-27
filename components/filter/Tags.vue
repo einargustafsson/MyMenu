@@ -6,13 +6,6 @@
 			<li v-for="product in products" :key="product.id">
 				<VmTag :product="product"></VmTag>
 			</li>
-			<!--
-			<li @click="filterByTag(''); toggleClass()" :class="[isActive ? 'red' : 'blue']">All</li>
-			<li @click="filterByTag('plates'); toggleClass()" :class="[isActive ? 'red' : 'blue']">Plates</li>
-			<li @click="filterByTag('main'); toggleClass()" :class="[isActive ? 'red' : 'blue']">Mains</li>
-			<li @click="filterByTag('drinks'); toggleClass()" :class="[isActive ? 'red' : 'blue']">Drinks</li>
-			<li @click="filterByTag('deserts'); toggleClass()" :class="[isActive ? 'red' : 'blue']">Deserts</li>
-			-->
 		</ul>
 	</div>
 </template>
@@ -76,20 +69,22 @@ export default {
   .control {
     width: 95%;
   }
+  li {background: #fff;}
+  a {color: #613916;}
   .tabs.is-toggle a:hover,
   .active {
-	  background: #209cee;
+	  background: #613916;
 	  color: white;
   }
-  .tabs {margin: 15px 0 0px 0}
+  .tabs {
+	  margin: 15px 0 0px 0
+	}
   .is-toggle ul {
     display: flex;
     flex-wrap: wrap;
-    height: 65px;
-    margin: 10px 0px 10px 0;
     justify-content: flex-start;
     align-content: stretch;
 	}
-	.is-toggle li {padding: 0; margin: 0 10px 10px 0;border: 1px solid #209cee;border-radius: 5px; }
+	.is-toggle li {padding: 0; margin: 0 10px 10px 0;border: 1px solid #613916;border-radius: 5px; }
 	.is-toggle li a {padding: 5px 15px;    text-align: center; display: block;}
   </style>

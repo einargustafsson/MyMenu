@@ -1,31 +1,33 @@
 <template>
   <div>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    
+      <!--
       <div class="navbar-brand">
+        
         <nuxt-link :to="{ name: 'index' }" class="navbar-item">
           <h1 class="title is-3 is-flex-mobile"></h1>
         </nuxt-link>
-
-        <div class="navbar-item shopping-cart" @click="showCheckoutModal">
+        
+        
+      </div>
+      -->
+      <div class="shopping-cart" @click="showCheckoutModal">
             <span class="icon">
               <i class="fa fa-shopping-cart"></i>
             </span>
             <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
           </div>
-      </div>
-
-      <div class="navbar-menu is-active">
-        <div class="navbar-start">
-          <div class="navbar-item field">
-            <VmSearch></VmSearch>
-            <VmFilter></VmFilter>
-          </div>
-        </div>
-        
-      </div>
-
+            
+              <div class="header search-bar">
+                <VmSearch></VmSearch>
+              </div>
+              <div class="filter">
+                <VmFilter></VmFilter>
+              </div>
+      
      
-    </nav>
+    
+    <p class="intro">Add items to the cart <br> we'll come and take your order</p>
   </div>
 </template>
 
@@ -68,25 +70,37 @@
 </script>
 
 <style lang="scss" scoped>
-  .navbar {
-    
-    width: 100%;
-  }
-  .title {
+  
+  .header {
     background: url('https://static1.squarespace.com/static/5c721c5034c4e26716faa829/t/5c7a84f00d929729702eebd5/1595371955548/?format=1500w') no-repeat;
-    background-position: 50% 50%;
-    background-size: 165px;
-    width: 175px;
-    height: 55px;
+    background-position: 5px 5px;
+    background-size: 95px;
+    padding-left: 105px;
+    height:65px;
+    padding-top: 5px;
   }
+
   .shopping-cart {
     cursor: pointer;
-    position: absolute;
-    top: 20px;
+    z-index: 10;
+    bottom: 10px;
     right: 20px;
     position: fixed;
+  }
+  .filter {
+    bottom: 0px;
+    left: 0;
+    position: fixed;
+    border-top: 2px solid #613916;
+    -webkit-box-shadow: 1px -5px 5px 0px rgba(0,0,0,0.21);
+    -moz-box-shadow: 1px -5px 5px 0px rgba(0,0,0,0.21);
+    box-shadow: 1px -5px 5px 0px rgba(0,0,0,0.21);
+    background: rgba(255,255,255,0.9);
+    padding: 10px 10px 5px;
+    z-index: 5;
   }
   a {
     color: grey;
   }
+  .intro {text-align: center; padding: 10px; background: #613916; color: white;}
 </style>
