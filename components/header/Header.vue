@@ -73,10 +73,10 @@
     width: 100%;
   }
   .title {
-    background: url('https://static1.squarespace.com/static/5c721c5034c4e26716faa829/t/5c7a84f00d929729702eebd5/1595371955548/?format=1500w') no-repeat;
+    background: url('/images/messinn.png') no-repeat;
     background-position: 50% 50%;
-    background-size: 165px;
-    width: 175px;
+    background-size: 85px;
+    width: 90px;
     height: 55px;
   }
   .shopping-cart {
