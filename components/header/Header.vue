@@ -26,6 +26,7 @@
 
      
     </nav>
+    <p class="intro">You can add items to the cart and then we'll come and take your order</p>
   </div>
 </template>
 
@@ -89,4 +90,5 @@
   a {
     color: grey;
   }
+  .intro {padding: 10px 20px; text-align: center;}
 </style>
