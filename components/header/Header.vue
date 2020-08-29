@@ -11,17 +11,18 @@
         
       </div>
       -->
-      <div class="shopping-cart" @click="showCheckoutModal">
-            <span class="icon">
-              <i class="fa fa-shopping-cart"></i>
-            </span>
-            <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
-          </div>
+      
             
               <div class="header search-bar">
                 <VmSearch></VmSearch>
               </div>
               <div class="filter">
+                <div class="shopping-cart" @click="showCheckoutModal">
+                  <span class="icon">
+                    <i class="fa fa-shopping-cart"></i>
+                  </span>
+                  <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
+                </div>
                 <VmFilter></VmFilter>
               </div>
       
@@ -83,9 +84,14 @@
   .shopping-cart {
     cursor: pointer;
     z-index: 10;
-    bottom: 10px;
-    right: 20px;
-    position: fixed;
+    top: -39px;
+    right: 10px;
+    position: absolute;
+    border: 2px solid #613916;
+    border-bottom: 2px solid #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    background: rgba(255,255,255,0.9);
   }
   .filter {
     bottom: 0px;

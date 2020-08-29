@@ -10,11 +10,10 @@
 			<section class="modal-card-body">
 				<div v-if="!isCheckoutSection">
 					<p class="intro">Sit tight or give us a nod and we'll come and take your order</p>
-					<div class="box" v-for="product in products" :key="product.id">
+					<div class="product" v-for="product in products" :key="product.id">
 						
-						<p>{{ product.title }}</p>
-						<p>{{ product.quantity > 0 ?  `Orders: ${product.quantity}` : ''}}</p>
-						<p>ISK {{ product.price }} </p>
+						<p>{{product.quantity}} x {{ product.title }}</p>
+						<p>kr {{ product.price.toLocaleString() }} </p>
 						<button class="button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button>
 						
 					</div>
@@ -87,7 +86,7 @@ export default {
 				}
 				//return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;
 				//return `Total of ${totalProducts} ${productLabel} at ISK ${finalPrice}`;
-				return `Total of ISK ${finalPrice}`;
+				return `Total of kr ${finalPrice.toLocaleString()}`;
 		},
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;
@@ -132,13 +131,20 @@ export default {
   .modal-card-foot {
     justify-content: flex-end;
   }
-  .box {
+  .product {
 	  position: relative;
-	  button {
-		  position: absolute;
-		  right: 5px;
-		  top: 0;
-	  }
+  }
+  .button.is-info.is-inverted {
+	  text-align: right;
+	  position: absolute;
+	  right: 0;
+	  bottom: 0;
+	  color: #613916;
   }
   .intro {text-align: center; margin-bottom: 20px;}
+  .product {
+	  border-top: 1px solid #ccc;
+	  border-bottom: 1px solid #ccc;
+	  padding: 5px;
+  }
   </style>

@@ -3,13 +3,13 @@
 
     <div class="card-image" :style="{ backgroundImage: `url('${product.imgURL}')` }" v-if="product.imgURL != ''">
       <p class="is-pulled-right price" v-if="product.price != ''">
-          <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
+          <span class="title is-4"><strong>kr {{ product.price.toLocaleString() }}</strong></span>
         </p>
     </div>
 
      <div class="card-image" style="background-image: url(/images/default.jpg)" v-else>
       <p class="is-pulled-right price" v-if="product.price != ''">
-          <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
+          <span class="title is-4"><strong>kr {{ product.price.toLocaleString() }}</strong></span>
         </p>
     </div>
     
@@ -34,7 +34,8 @@
            <div class="selector is-rounded is-small">
             <button class="button remove-from-cart" @click="removeFromCart(product.id, false)">-</button>
             <span class="counter-container">
-              <input class="counter" v-model="newValue" disabled />
+              
+              <span class="counter">{{newValue}}</span>
             </span>
             <button class="button add-to-cart" @click="addToCart(product.id)">+</button>
           </div>
@@ -186,6 +187,7 @@ export default {
  }
  .counter {
       width:100%;
+      display: inline-block;
       text-align:center;
       font-size:18px;
       font-weight: bold;
