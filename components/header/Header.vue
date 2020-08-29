@@ -16,7 +16,8 @@
               <div class="header search-bar">
                 <VmSearch></VmSearch>
               </div>
-              <div class="filter">
+              <div class="filter"
+                :class="{ 'navbar--hidden': !showNavbar }">
                 <div class="shopping-cart" @click="showCheckoutModal">
                   <span class="icon">
                     <i class="fa fa-shopping-cart"></i>
@@ -47,7 +48,9 @@
         twitterTooltip: 'Follow us on Twitter',
         instagramTooltip: 'Follow us on Instagram',
         isCheckoutActive: false,
-        isMenuOpen: false
+        isMenuOpen: false,
+        showNavbar: true,
+        lastScrollPosition: 0
       }
     },
 
@@ -62,9 +65,29 @@
       }
     },
 
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.onScroll)
+    },
+
     methods: {
       showCheckoutModal () {
         this.$store.commit('showCheckoutModal', true);
+      },
+      onScroll () {
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+        if (currentScrollPosition < 0) {
+          return
+        }
+        // Stop executing this function if the difference between
+        // current scroll position and last scroll position is less than some offset
+        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+          return
+        }
+        this.showNavbar = currentScrollPosition < this.lastScrollPosition
+        this.lastScrollPosition = currentScrollPosition
       }
     }
   };
@@ -84,7 +107,7 @@
   .shopping-cart {
     cursor: pointer;
     z-index: 10;
-    top: -39px;
+    top: -38px;
     right: 10px;
     position: absolute;
     border: 2px solid #613916;
@@ -109,4 +132,13 @@
     color: grey;
   }
   .intro {text-align: center; padding: 10px; background: #613916; color: white;}
+
+  .filter {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
+}
+.filter.navbar--hidden {
+  transform: translate3d(0, 100%, 0);
+}
 </style>

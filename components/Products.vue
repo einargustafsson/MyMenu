@@ -220,15 +220,9 @@ export default {
 }
 .card-content {
   padding: 0.5rem 1rem;
-  min-height: 220px;
 }
 
-.card .content p{
-    overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
+
 .card-content h2, .card-content p{
    padding: 0 15px;
  }
@@ -248,10 +242,23 @@ export default {
 }
  .card .media {margin-bottom: 0.5rem;}
  .add-to-order {background-color: #613916;}
- .card-footer {
+ 
+
+  @media (min-width: 768px) {
+  .card-content {
+    min-height: 220px;
+  }
+  .card-footer {
    position: absolute;
-  bottom: 0;
-  width: 93%;
+    bottom: 0;
+    width: 93%;
+    }
+    .card .content p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
   }
 </style>
 
