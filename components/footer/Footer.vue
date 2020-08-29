@@ -22,11 +22,11 @@ export default {
 
 <style lang="scss" scoped>
  .footer {
-   background: #209cee;
-   color: #fff;
+   background: #ccc;
+   color: #333;
  }
  .footer a {
-    color: #fff; 
+    color: #613916; 
     text-decoration: underline;
 }
 .footer li {display: inline-block; margin-right: 20px;}

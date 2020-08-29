@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div class="card-image">
-      <figure class="image" v-if="product.imgURL != ''">
-        <img :src="product.imgURL">
-      </figure>
-      <figure class="image" v-else>
-        <img src="/images/default.jpg">
-      </figure>
+
+    <div class="card-image" :style="{ backgroundImage: `url('${product.imgURL}')` }" v-if="product.imgURL != ''">
       <p class="is-pulled-right price" v-if="product.price != ''">
-          <span class="title is-4"><strong>ISK {{ product.price }}</strong></span>
+          <span class="title is-4"><strong>kr {{ product.price.toLocaleString() }}</strong></span>
         </p>
     </div>
+
+     <div class="card-image" style="background-image: url(/images/default.jpg)" v-else>
+      <p class="is-pulled-right price" v-if="product.price != ''">
+          <span class="title is-4"><strong>kr {{ product.price.toLocaleString() }}</strong></span>
+        </p>
+    </div>
+    
     <div class="card-content">
       <div class="media">
         <div class="">
@@ -32,7 +34,8 @@
            <div class="selector is-rounded is-small">
             <button class="button remove-from-cart" @click="removeFromCart(product.id, false)">-</button>
             <span class="counter-container">
-              <input class="counter" v-model="newValue" disabled />
+              
+              <span class="counter">{{newValue}}</span>
             </span>
             <button class="button add-to-cart" @click="addToCart(product.id)">+</button>
           </div>
@@ -175,11 +178,16 @@ export default {
     z-index: 1;
 
     &:hover {
-      border: 1px solid #51bafc;
+      border: 1px solid #613916;
     }
+ }
+ .title {
+   margin-top: 10px;
+   color: #613916;
  }
  .counter {
       width:100%;
+      display: inline-block;
       text-align:center;
       font-size:18px;
       font-weight: bold;
@@ -187,7 +195,7 @@ export default {
       border:none;
       background: #fff;
       margin-top: 5px;
-      color: #209cee;
+      color: #613916;
   }
  .button,
  .selector {
@@ -195,7 +203,7 @@ export default {
  }
  .selector {
    display: flex; justify-content: flex-end; width: 100%}
- .selector button {background-color: #209cee; color: white; margin: 0; font-weight: bold; font-size: 18px;}
+ .selector button {background-color: #613916; color: white; margin: 0; font-weight: bold; font-size: 18px;}
  .selector button ,
   .selector .counter-container {
       flex: 1;
@@ -213,6 +221,8 @@ export default {
 .card-content {
   padding: 0.5rem 1rem;
 }
+
+
 .card-content h2, .card-content p{
    padding: 0 15px;
  }
@@ -222,13 +232,34 @@ export default {
  }
 
 .card-image {
-  min-height: 80px;
+  min-height: 250px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .image img {
   margin-bottom: 20px;
 }
  .card .media {margin-bottom: 0.5rem;}
- .add-to-order {background-color: #209cee;}
+ .add-to-order {background-color: #613916;}
+ 
+
+  @media (min-width: 768px) {
+  .card-content {
+    min-height: 220px;
+  }
+  .card-footer {
+   position: absolute;
+    bottom: 0;
+    width: 93%;
+    }
+    .card .content p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  }
 </style>
 
 

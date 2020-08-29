@@ -1,32 +1,35 @@
 <template>
   <div>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    
+      <!--
       <div class="navbar-brand">
+        
         <nuxt-link :to="{ name: 'index' }" class="navbar-item">
           <h1 class="title is-3 is-flex-mobile"></h1>
         </nuxt-link>
-
-        <div class="navbar-item shopping-cart" @click="showCheckoutModal">
-            <span class="icon">
-              <i class="fa fa-shopping-cart"></i>
-            </span>
-            <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
-          </div>
-      </div>
-
-      <div class="navbar-menu is-active">
-        <div class="navbar-start">
-          <div class="navbar-item field">
-            <VmSearch></VmSearch>
-            <VmFilter></VmFilter>
-          </div>
-        </div>
+        
         
       </div>
-
+      -->
+      
+            
+              <div class="header search-bar">
+                <VmSearch></VmSearch>
+              </div>
+              <div class="filter"
+                :class="{ 'navbar--hidden': !showNavbar }">
+                <div class="shopping-cart" @click="showCheckoutModal">
+                  <span class="icon">
+                    <i class="fa fa-shopping-cart"></i>
+                  </span>
+                  <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
+                </div>
+                <VmFilter></VmFilter>
+              </div>
+      
      
-    </nav>
-    <p class="intro">You can add items to the cart and then we'll come and take your order</p>
+    
+    <p class="intro">Add items to the cart <br> we'll come and take your order</p>
   </div>
 </template>
 
@@ -45,7 +48,9 @@
         twitterTooltip: 'Follow us on Twitter',
         instagramTooltip: 'Follow us on Instagram',
         isCheckoutActive: false,
-        isMenuOpen: false
+        isMenuOpen: false,
+        showNavbar: true,
+        lastScrollPosition: 0
       }
     },
 
@@ -60,35 +65,80 @@
       }
     },
 
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.onScroll)
+    },
+
     methods: {
       showCheckoutModal () {
         this.$store.commit('showCheckoutModal', true);
+      },
+      onScroll () {
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+        if (currentScrollPosition < 0) {
+          return
+        }
+        // Stop executing this function if the difference between
+        // current scroll position and last scroll position is less than some offset
+        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+          return
+        }
+        this.showNavbar = currentScrollPosition < this.lastScrollPosition
+        this.lastScrollPosition = currentScrollPosition
       }
     }
   };
 </script>
 
 <style lang="scss" scoped>
-  .navbar {
-    
-    width: 100%;
-  }
-  .title {
+  
+  .header {
     background: url('https://static1.squarespace.com/static/5c721c5034c4e26716faa829/t/5c7a84f00d929729702eebd5/1595371955548/?format=1500w') no-repeat;
-    background-position: 50% 50%;
-    background-size: 165px;
-    width: 175px;
-    height: 55px;
+    background-position: 5px 5px;
+    background-size: 95px;
+    padding-left: 105px;
+    height:65px;
+    padding-top: 5px;
   }
+
   .shopping-cart {
     cursor: pointer;
+    z-index: 10;
+    top: -38px;
+    right: 10px;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    border: 2px solid #613916;
+    border-bottom: 2px solid #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    background: rgba(255,255,255,0.9);
+  }
+  .filter {
+    bottom: 0px;
+    left: 0;
     position: fixed;
+    border-top: 2px solid #613916;
+    -webkit-box-shadow: 1px -5px 5px 0px rgba(0,0,0,0.21);
+    -moz-box-shadow: 1px -5px 5px 0px rgba(0,0,0,0.21);
+    box-shadow: 1px -5px 5px 0px rgba(0,0,0,0.21);
+    background: rgba(255,255,255,0.9);
+    padding: 10px 10px 5px;
+    z-index: 5;
   }
   a {
     color: grey;
   }
-  .intro {padding: 10px 20px; text-align: center;}
+  .intro {text-align: center; padding: 10px; background: #613916; color: white;}
+
+  .filter {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
+}
+.filter.navbar--hidden {
+  transform: translate3d(0, 100%, 0);
+}
 </style>

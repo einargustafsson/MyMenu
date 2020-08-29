@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-centered is-multiline">
-    <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
+    <div class="card column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen" v-for="product in products" :key="product.id">
       <VmProducts :product="product"></VmProducts>
     </div>
     <div class="section" v-if="products.length === 0">
@@ -58,8 +58,7 @@ export default {
 <style lang="scss" scoped>
   .card {
     padding: 0;
-    border-bottom: 2px solid #209cee;
+    border-bottom: 2px solid #613916;
   }
  .columns {margin: 0;}
- 
 </style>

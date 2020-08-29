@@ -1,7 +1,7 @@
 {
   "name": "mymenu",
   "version": "0.1.0",
-  "description": "Mobile menu generator for touch free viewing",
+  "description": "Mobile menu",
   "author": "Einar Gustafsson <einarg@hey.com>",
   "scripts": {
     "dev": "nuxt",
