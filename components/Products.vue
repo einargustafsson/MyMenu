@@ -1,13 +1,20 @@
 <template>
   <div>
 
-    <div class="card-image" :style="{ backgroundImage: `url('${product.imgURL}')` }" v-if="product.imgURL != ''">
+   <!-- <div class="card-image" :style="{ backgroundImage: `url('${product.imgURL}')` }" v-if="product.imgURL != ''">-->
+     <div class="card-image" v-if="product.imgURL != ''">
+      <appImage
+      :lazy-src="product.imgURL"
+      />
       <p class="is-pulled-right price" v-if="product.price != ''">
           <span class="title is-4"><strong>kr {{ product.price.toLocaleString() }}</strong></span>
         </p>
     </div>
 
-     <div class="card-image" style="background-image: url(/images/default.jpg)" v-else>
+     <div class="card-image" v-else>
+     <appImage
+      lazy-src="/images/default.jpg"
+      />
       <p class="is-pulled-right price" v-if="product.price != ''">
           <span class="title is-4"><strong>kr {{ product.price.toLocaleString() }}</strong></span>
         </p>
@@ -64,7 +71,7 @@
 </template>
 
 <script>
-
+import appImage from './appImage/AppImage';
 
 export default {
   name: 'products',
@@ -97,6 +104,10 @@ export default {
       newValue: 0
     }
   },
+
+  components: {
+      appImage
+    },
 
   mounted () {
     for (let i = 1; i <= 10; i++) {
@@ -231,7 +242,7 @@ export default {
    margin: 0;
  }
 
-.card-image {
+.card-image, .AppImage {
   min-height: 250px;
   background-size: cover;
   background-position: 50% 50%;
@@ -242,7 +253,6 @@ export default {
 }
  .card .media {margin-bottom: 0.5rem;}
  .add-to-order {background-color: #613916;}
- 
 
   @media (min-width: 768px) {
   .card-content {
