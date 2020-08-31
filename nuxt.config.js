@@ -48,12 +48,7 @@ module.exports = {
       { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-icon-120x120.png' },
       { rel: 'apple-touch-icon', sizes: '144x144', href: '/apple-icon-144x144.png' },
       { rel: 'apple-touch-icon', sizes: '152x152', href: '/apple-icon-152x152.png' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' }
     ]
   },
 
@@ -82,7 +77,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/font-awesome'
+    //'@nuxtjs/font-awesome'
   ],
   /*
   ** Axios module configuration

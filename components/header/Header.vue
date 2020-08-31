@@ -116,6 +116,13 @@
     padding: 5px;
     background: rgba(255,255,255,0.9);
   }
+  .fa-shopping-cart{
+    width: 16px;
+    height: 13px;
+    background-size: 16px;
+    display: inline-block;
+    background: url('/images/cart.svg') no-repeat;
+    }
   .filter {
     bottom: 0px;
     left: 0;
@@ -127,6 +134,7 @@
     background: rgba(255,255,255,0.9);
     padding: 10px 10px 5px;
     z-index: 5;
+    width: 100%;
   }
   a {
     color: grey;
