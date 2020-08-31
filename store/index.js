@@ -12,7 +12,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type: 'Main',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670625772-J0IM4S1QRVE2EP3SMDLV/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5727.jpg?format=500w'
+      imgURL: '/images/plate_loki.jpg'
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type: 'Main',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670712342-W80QUV9RK41P5JB2JGCS/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5737.jpg?format=500w'
+      imgURL: '/images/plate_baldur.jpg'
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type: 'Main',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551670977993-U4BZ0RJP7B6L6HZ56Z6O/ke17ZwdGBToddI8pDm48kLRAvIOuD_BeOmvIoc2uxngUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcPqTeDH7fKPa2US_s5qbB6FQIWaMIObzCsue3bQUWeZdbZWxuQwynQ0LmYHq0RCqo/IP+l+banner.jpg?format=1500w'
+      imgURL: '/images/plate_thor.jpg'
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type: 'Main',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551671692091-ZDDYXYXGFZ19XMW0BTP3/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5747.jpg?format=500w'
+      imgURL: '/images/plate_freyja.jpg'
     },
     {
       id: 5,
@@ -68,7 +68,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type: 'Main',
-      imgURL: 'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1550988829598-T1YPOPI6V3J02IDO0N4E/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5761.jpg?format=500w'
+      imgURL: '/images/mashed_fish.jpg'
     },
     {
       id: 6,
@@ -82,7 +82,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Main',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1550988952105-CF5VI38AQ2O9TQJEQLLR/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_kjotsupa.jpg?format=500w'
+      imgURL:'/images/Loki_kjotsupa.jpg'
     },
     {
       id: 7,
@@ -96,7 +96,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Main',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551672218966-0YTCNE7H9B0HA73BU3MQ/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/Grænmetisréttur.jpg?format=500w'
+      imgURL:'/images/vegeterian.jpg'
     },
     {
       id: 8,
@@ -110,7 +110,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Main',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551672107417-6LUG9PBCW6B5FZ3L1UD6/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5753.jpg?format=500w'
+      imgURL:'/images/braveheart.jpg'
     },
     {
       id: 9,
@@ -124,7 +124,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Main',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1550988816675-MS02CJVMRPQMGTB88H23/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5796.jpg?format=1000w'
+      imgURL:'/images/boiled_fish.jpg'
     },
     {
       id: 77,
@@ -166,7 +166,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Main',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551672107417-6LUG9PBCW6B5FZ3L1UD6/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/_MG_5753.jpg?format=500w'
+      imgURL:'/images/tasting.jpg'
     },
     {
       id: 11,
@@ -180,7 +180,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551672905898-VU87G93GVHRCLLJBNIYW/ke17ZwdGBToddI8pDm48kGDpvalPb1SqHoCn1hwN0Y57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQPoRzxSr1hzN-vPBHt7YyLLXgctAyUJRqJUUGWVDK_ZzIgvsybGcZEPqUYiXY8im/Loki%27s+herring+plate.jpg?format=1500w'
+      imgURL:'/images/herring.jpg'
     },
     {
       id: 12,
@@ -236,7 +236,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551673255119-EMUCI4Y16XBSGULSTBMA/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_flatkaka_m_hangikjoti.jpg?format=1500w'
+      imgURL:'/images/hangikjot.jpg'
     },
     {
       id: 16,
@@ -250,7 +250,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551673255118-DTBHHSRUFIGOQPJ14UK5/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_flatkaka_m_silung.jpg?format=1500w'
+      imgURL:'/images/trout.jpg'
     },
     {
       id: 17,
@@ -264,7 +264,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551673255641-KNRIBBR09NF76MJXCIA8/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_flatkaka_m_svidasultu.jpg?format=1500w'
+      imgURL:'/images/svidasulta.jpg'
     },
     {
       id: 18,
@@ -292,7 +292,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551674044320-7853MO5H5C2U0DF7YA5S/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_beygla_m_silungi.jpg?format=1500w'
+      imgURL:'/images/bagel_trout.jpg'
     },
     {
       id: 20,
@@ -306,7 +306,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Appetizers',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551674045068-GIR2R2ODLITYCIR6H976/ke17ZwdGBToddI8pDm48kPoswlzjSVMM-SxOp7CV59BZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIeQMKeWYgwh6Mn73n2eZmZLHHpcPIxgL2SArp_rN2M_AKMshLAGzx4R3EDFOm1kBS/Loki_beygla_m_skinku.jpg?format=1500w'
+      imgURL:'/images/bagel_ham.jpg'
     },
     {
       id: 21,
@@ -320,7 +320,7 @@ export const state = () => ({
       isFavourite: false,
       quantity: 1,
       type:'Pastry',
-      imgURL:'https://images.squarespace-cdn.com/content/v1/5c721c5034c4e26716faa829/1551673975353-U3RQHAO8YR3E3PCGHOIK/ke17ZwdGBToddI8pDm48kGDpvalPb1SqHoCn1hwN0Y57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQPoRzxSr1hzN-vPBHt7YyLLXgctAyUJRqJUUGWVDK_ZzIgvsybGcZEPqUYiXY8im/Rúgbrauðs%C3%ADs%2C+Rye+bread+ice+cream.jpg?format=500w'
+      imgURL:'/images/rye_ice.jpg'
     },
     {
       id: 22,
@@ -953,6 +953,36 @@ export const state = () => ({
       imgURL:'/images/malt.jpg'
     }
   ],
+  products_is: [
+    {
+      id: 1,
+      title: 'íslenskur diskur Loki',
+      description: 'Rye bread slices, with mashed fish ( Plokkfiskur) & smoked trout. Flatbread with smoked lamb.Dried fish with butter and taste of fermented shark.',
+      price: 3300,
+      ratings: 3,
+      reviews: 5,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type: 'Main',
+      imgURL: '/images/plate_loki.jpg'
+    },
+    {
+      id: 2,
+      title: 'íslenskur diskur Baldur',
+      description: 'Two rye bread slices, one with mashed fish & the other with egg & herring. Loki’s unique Rye bread ice cream.',
+      price: 2400,
+      ratings: 5,
+      reviews: 10,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type: 'Main',
+      imgURL: '/images/plate_baldur.jpg'
+    }],
+  
   userInfo: {
     isLoggedIn: false,
     isSignedUp: false,
@@ -960,7 +990,8 @@ export const state = () => ({
     hasFiltered: false,
     name: '',
     productTitleSearched: '',
-    productTagFiltered: ''
+    productTagFiltered: '',
+    lang: 'en'
   },
   systemInfo: {
     openLoginModal: false,

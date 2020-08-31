@@ -15,8 +15,7 @@ import { getByTitle } from '@/assets/filters';
 import { getByTag } from '@/assets/tags';
 
 export default {
-  name: 'productsList',
-  
+  name: 'productsList',  
   components: { VmProducts },
   
   data () {
@@ -29,24 +28,31 @@ export default {
 
   computed: {
     products () {
+      var lang = this.$store.state.userInfo.lang;
+      var store = this.$store.state.products;
+      if(lang == "is")
+      {
+        store = this.$store.state.products_is;
+      }
+
       if (this.$store.state.userInfo.hasSearched) {
-        return this.getProductByTitle();
+        return this.getProductByTitle(store);
       } else if(this.$store.state.userInfo.hasFiltered) {
-        return this.getProductByTag();
+        return this.getProductByTag(store);
       } else {
-        return this.$store.state.products;
+          return store;
       }
     }
   },
 
   methods: {
-    getProductByTitle () {
-      let listOfProducts = this.$store.state.products,
+    getProductByTitle (store) {
+      let listOfProducts = store,
           titleSearched = this.$store.state.userInfo.productTitleSearched;
       return this.productsFiltered = getByTitle(listOfProducts, titleSearched);
     },
-    getProductByTag () {
-      let listOfProducts = this.$store.state.products,
+    getProductByTag (store) {
+      let listOfProducts = store,
           tagSearched = this.$store.state.userInfo.productTagFiltered;
       return this.productsFiltered = getByTag(listOfProducts, tagSearched);
     }
@@ -60,6 +66,8 @@ export default {
     padding: 0;
     border-bottom: 2px solid #613916;
   }
- .columns {margin: 0;}
+ .columns {
+   margin: 0;
+  }
 
 </style>

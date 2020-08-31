@@ -96,7 +96,7 @@
 <style lang="scss" scoped>
   
   .header {
-    background: url('https://static1.squarespace.com/static/5c721c5034c4e26716faa829/t/5c7a84f00d929729702eebd5/1595371955548/?format=1500w') no-repeat;
+    background: url('/images/loki.png') no-repeat;
     background-position: 5px 5px;
     background-size: 95px;
     padding-left: 105px;
