@@ -56,6 +56,16 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
+  build: {               // customize webpack build
+    vendor: ['vue-i18n'] // webpack vue-i18n.bundle.js
+  },
+  router: {              // customize nuxt.js router (vue-router).
+    middleware: 'i18n'   // middleware all pages of the application
+  },
+  
+  generate: {
+    routes: ['/', '/about', '/is', '/is/about']
+  },
 
   /*
   ** Global CSS
@@ -70,7 +80,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/plugins/i18n.js'], // webpack plugin
 
   /*
   ** Nuxt.js modules

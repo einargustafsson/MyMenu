@@ -30,7 +30,7 @@ export default {
     products () {
       var lang = this.$store.state.userInfo.lang;
       var store = this.$store.state.products;
-      if(lang == "is")
+      if(this.$store.state.locale == "is")
       {
         store = this.$store.state.products_is;
       }

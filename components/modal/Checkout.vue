@@ -3,22 +3,22 @@
 		<div class="modal-background"></div>
 		<div class="modal-card">
 			<header class="modal-card-head">
-				<p class="modal-card-title">{{ modalTitle }}</p>
+				<p class="modal-card-title">{{$t('yourorder')}}</p>
 				
 				<button class="delete" aria-label="close" @click="closeModal(false)"></button>
 			</header>
 			<section class="modal-card-body">
 				<div v-if="!isCheckoutSection">
-					<p class="intro">Sit tight or give us a nod and we'll come and take your order</p>
+					<p v-if="products.length != 0" class="intro">{{ $t('checkout') }}</p>
 					<div class="product" v-for="product in products" :key="product.id">
 						
 						<p>{{product.quantity}} x {{ product.title }}</p>
 						<p>kr {{ product.price.toLocaleString() }} </p>
-						<button class="button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button>
+						<button class="button is-info is-inverted" @click="removeFromCart(product.id)">{{ $t('remove') }}</button>
 						
 					</div>
 					<div v-if="products.length === 0">
-						<p>{{ cartEmptyLabel }}</p>
+						<p>{{ $t('cartEmptyLabel') }}</p>
 					</div>
 				</div>
 				<div v-if="isCheckoutSection">
@@ -27,7 +27,7 @@
 			</section>
 			
 			<footer class="modal-card-foot">
-				<h3 v-show="products.length > 0 && !isCheckoutSection" class=" is-success" @click="onNextBtn">{{ buyLabel }}</h3>
+				<h3 v-show="products.length > 0 && !isCheckoutSection" class=" is-success" @click="onNextBtn">{{ $t('totalof') }} {{ buyLabel }}</h3>
 				<button v-if="isCheckoutSection" class="button is-success" @click="closeModal(true)">{{ closeLabel }}</button>
 			</footer>
 			
@@ -86,7 +86,7 @@ export default {
 				}
 				//return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;
 				//return `Total of ${totalProducts} ${productLabel} at ISK ${finalPrice}`;
-				return `Total of kr ${finalPrice.toLocaleString()}`;
+				return `kr ${finalPrice.toLocaleString()}`;
 		},
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;

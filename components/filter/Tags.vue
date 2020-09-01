@@ -2,7 +2,7 @@
 	<div class="is-toggle is-toggle-rounded">
 		<ul>
 			 
-			<li><a @click="filterByTag(''); toggleClass()" class="active" :class="[isActive ? 'active' : 'notactive']">All</a></li>	
+			<li><a @click="filterByTag(''); toggleClass()" class="active" :class="[isActive ? 'active' : 'notactive']">{{ $t('all') }}</a></li>	
 			<li v-for="product in products" :key="product.id">
 				<VmTag :product="product"></VmTag>
 			</li>

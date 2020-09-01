@@ -1,9 +1,11 @@
 export const state = () => ({
+  locales: ['en', 'is'],
+  locale: 'en',
   products: [
     {
       id: 1,
       title: 'Icelandic plate Loki',
-      description: 'Rye bread slices, with mashed fish ( Plokkfiskur) & smoked trout. Flatbread with smoked lamb.Dried fish with butter and taste of fermented shark.',
+      description: 'Rye bread slices, with mashed fish ( Plokkfiskur) & smoked trout. Flatbread with smoked lamb. Dried fish with butter and taste of fermented shark.',
       price: 3300,
       ratings: 3,
       reviews: 5,
@@ -1002,9 +1004,17 @@ export const state = () => ({
 
 export const getters = {
   productsAdded: state => {
-    return state.products.filter(el => {
-      return el.isAddedToCart;
-    });
+    if(state.locale == "is")
+      {
+        return state.products_is.filter(el => {
+          return el.isAddedToCart;
+        });
+      }
+    else {
+      return state.products.filter(el => {
+        return el.isAddedToCart;
+      });
+    }
   },
   productsAddedToFavourite: state => {
     return state.products.filter(el => {
@@ -1039,11 +1049,22 @@ export const getters = {
 
 export const mutations = {
   addToCart: (state, id) => {
-    state.products.forEach(el => {
-      if (id === el.id) {
-        el.isAddedToCart = true;
-      }
-    });
+    if(state.locale == "is")
+    {
+      state.products_is.forEach(el => {
+        if (id === el.id) {
+          el.isAddedToCart = true;
+        }
+      });
+    }
+    else 
+    {
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isAddedToCart = true;
+        }
+      });
+    }
   },
   setAddedBtn: (state, data) => {
     state.products.forEach(el => {
@@ -1053,11 +1074,22 @@ export const mutations = {
     });
   },
   removeFromCart: (state, id) => {
-    state.products.forEach(el => {
-      if (id === el.id) {
-        el.isAddedToCart = false;
-      }
-    });
+    if(state.locale == "is")
+    {
+      state.products_is.forEach(el => {
+        if (id === el.id) {
+          el.isAddedToCart = false;
+        }
+      });
+    }
+    else 
+    {
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isAddedToCart = false;
+        }
+      });
+    }
   },
   removeProductsFromFavourite: state => {
     state.products.filter(el => {
@@ -1119,6 +1151,11 @@ export const mutations = {
   },
   SET_USER(state, authUser) {
     state.authUser = authUser
+  },
+  SET_LANG(state, locale) {
+    if (state.locales.indexOf(locale) !== -1) {
+      state.locale = locale
+    }
   }
 }
 /* 

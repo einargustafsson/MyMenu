@@ -15,9 +15,16 @@
             
               <div class="header search-bar">
                 <VmSearch></VmSearch>
+                <div class="language-selector">
+                  <ul>
+                    <li v-if="this.$store.state.locale != 'en'" class="en"><a href="/en">EN</a></li>
+                    <li v-if="this.$store.state.locale != 'is'" class="is"><a href="/is">IS</a></li>
+                  </ul>
+                </div> 
               </div>
               <div class="filter"
                 :class="{ 'navbar--hidden': !showNavbar }">
+                
                 <div class="shopping-cart" @click="showCheckoutModal">
                   <span class="icon">
                     <i class="fa fa-shopping-cart"></i>
@@ -29,7 +36,7 @@
       
      
     
-    <p class="intro">Add items to the cart <br> we'll come and take your order</p>
+    <p class="intro">{{ $t('intro') }}</p>
   </div>
 </template>
 
@@ -97,8 +104,8 @@
   
   .header {
     background: url('/images/loki.png') no-repeat;
-    background-position: 5px 5px;
-    background-size: 95px;
+    background-position: 10px 10px;
+    background-size: 75px;
     padding-left: 105px;
     height:65px;
     padding-top: 5px;
@@ -139,14 +146,52 @@
   a {
     color: grey;
   }
-  .intro {text-align: center; padding: 10px; background: #613916; color: white;}
+  .intro {
+    text-align: center; 
+    padding: 10px; 
+    background: #613916; 
+    color: white;
+    white-space: pre;
+  }
 
   .filter {
   position: fixed;
   transform: translate3d(0, 0, 0);
   transition: 0.3s all ease-out;
+  }
+  .filter.navbar--hidden {
+    transform: translate3d(0, 100%, 0);
+  }
+  .language-selector {
+      position: absolute;
+      top: 25px;
+      right: 10px;
+      z-index: 10;
+  }
+  .language-selector li{
+      display: inline-block; 
+    position: relative;
+    width: 30px;
 }
-.filter.navbar--hidden {
-  transform: translate3d(0, 100%, 0);
-}
+  .language-selector li a{
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      display: block;
+  }
+  .language-selector li a:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 26px;
+      height: 22px;
+      background-image: url('/images/en.svg');
+      display: block;
+      background-size: 22px;
+      background-repeat: no-repeat;
+  }
+  .language-selector li.is a:after {
+      background-image: url('/images/is.svg');
+  }
 </style>
