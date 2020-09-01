@@ -19,21 +19,21 @@ module.exports = {
       
       // Facebook open graph
       { property: 'og:type',  content: 'website' },
-      { property: 'og:url',  content: 'https://example.com/page.html' },
-      { property: 'og:title',  content: 'Content Title' },
-      { property: 'og:image',  content: 'https://example.com/image.jpg' },
-      { property: 'og:description',  content: 'Description Here' },
-      { property: 'og:site_name',  content: 'Site Name' },
+      { property: 'og:url',  content: 'https://mymenuis.netlify.app' },
+      { property: 'og:title',  content: 'Loki Mobile Menu' },
+      { property: 'og:image',  content: '/images/default.jpg' },
+      { property: 'og:description',  content: 'Mobile menu for touch free ordering' },
+      { property: 'og:site_name',  content: 'Mobile Menu' },
       { property: 'og:locale',  content: 'en_US' },
 
       // Twitter card
       { property: 'twitter:card',  content: 'summary' },
       { property: 'twitter:site',  content: '@site_account' },
-      { property: 'twitter:creator',  content: '@individual_account' },
-      { property: 'twitter:url',  content: 'https://example.com/page.html' },
-      { property: 'twitter:title',  content: 'Content Title' },
-      { property: 'twitter:description',  content: 'Content description less than 200 characters' },
-      { property: 'twitter:image',  content: 'https://example.com/image.jpg' }
+      { property: 'twitter:creator',  content: '@einargustafsson' },
+      { property: 'twitter:url',  content: 'https://mymenuis.netlify.app' },
+      { property: 'twitter:title',  content: 'Loki Mobile Menu' },
+      { property: 'twitter:description',  content: 'Mobile menu for touch free ordering' },
+      { property: 'twitter:image',  content: '/images/default.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -1,7 +1,7 @@
 {
   "name": "mymenu",
-  "version": "0.1.0",
-  "description": "Mobile menu",
+  "version": "1.0.0",
+  "description": "Mobile menu for touch free order",
   "author": "Einar Gustafsson <einarg@hey.com>",
   "scripts": {
     "dev": "nuxt",
