@@ -38,13 +38,12 @@ computed: {
         }
     },
     toggleClass: function() {
-
-         var actives = document.getElementsByClassName ("active");
+        var actives = document.getElementsByClassName ("active");
         for (var i=0; i<actives.length; i++) {
             actives[i].className = "notactive";
-            
         }
         this.isActive = !this.isActive;
+        window.scrollTo(0,0);
         /*
         if(!this.isActive){
             console.log('this button was not active');
