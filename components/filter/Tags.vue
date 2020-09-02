@@ -1,9 +1,16 @@
 <template>
 	<div class="is-toggle is-toggle-rounded">
-		<ul>
-			 
-			<li><a @click="filterByTag(''); toggleClass()" class="active" :class="[isActive ? 'active' : 'notactive']">All</a></li>	
+		
+		<ul v-if="this.$store.state.locale == 'en'"> 
+			<li><a @click="filterByTag(''); toggleClass()" class="active" :class="[isActive ? 'active' : 'notactive']">{{ $t('all') }}</a></li>	
 			<li v-for="product in products" :key="product.id">
+				<VmTag :product="product"></VmTag>
+			</li>
+		</ul>
+
+		<ul v-if="this.$store.state.locale == 'is'"> 
+			<li><a @click="filterByTag(''); toggleClass()" class="active" :class="[isActive ? 'active' : 'notactive']">{{ $t('all') }}</a></li>	
+			<li v-for="product in products_is" :key="product.id">
 				<VmTag :product="product"></VmTag>
 			</li>
 		</ul>
@@ -41,6 +48,13 @@ export default {
 					[current.type]: current
 				});
 			}, {});
+		},
+		products_is () {
+			return this.$store.state.products_is.reduce((seed, current) => {
+				return Object.assign(seed, {
+					[current.type]: current
+				});
+			}, {});
 		}
 	},
 
@@ -60,6 +74,7 @@ export default {
 				actives[i].className = "notactive";
 			}
 			this.isActive = !this.isActive;
+			window.scrollTo(0,0);
 		}
 	}
 }

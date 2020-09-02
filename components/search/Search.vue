@@ -49,7 +49,14 @@ export default {
 
 <style lang="scss" scoped>
   .control {
-    width: 95%;
+    width: 80%;
 	margin-top: 10px;
   }
+  .fa-search{
+    width: 16px;
+    height: 13px;
+    background-size: 16px;
+    display: inline-block;
+	background: url('/images/search.svg') no-repeat;
+	}
   </style>
