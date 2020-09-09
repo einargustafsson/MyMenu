@@ -157,6 +157,20 @@ export const state = () => ({
       imgURL:'/images/lamb.jpg'
     },
     {
+      id: 78,
+      title: 'Vegetable lasagne',
+      description: 'with garlic bread and salad',
+      price: '2500',
+      ratings: 3,
+      reviews: 0,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Matseðill',
+      imgURL:'/images/lasagne.jpg'
+    },
+    {
       id: 10,
       title: 'Must try-Tasting',
       description: 'Fermented shark & Brennivín shot',
@@ -1109,6 +1123,20 @@ export const state = () => ({
       quantity: 1,
       type:'Matseðill',
       imgURL:'/images/lamb.jpg'
+    },
+    {
+      id: 78,
+      title: 'Grænmetis lasagne',
+      description: 'með hvítlauksbrauði og hrásalati',
+      price: '2500',
+      ratings: 3,
+      reviews: 0,
+      isAddedToCart: false,
+      isAddedBtn: false,
+      isFavourite: false,
+      quantity: 1,
+      type:'Matseðill',
+      imgURL:'/images/lasagne.jpg'
     },
     {
       id: 10,
