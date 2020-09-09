@@ -167,7 +167,7 @@ export const state = () => ({
       isAddedBtn: false,
       isFavourite: false,
       quantity: 1,
-      type:'Matseðill',
+      type:'Main',
       imgURL:'/images/lasagne.jpg'
     },
     {
