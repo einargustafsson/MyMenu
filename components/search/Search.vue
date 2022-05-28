@@ -51,6 +51,7 @@ export default {
   .control {
     width: 80%;
 	margin-top: 10px;
+	display: none;
   }
   .fa-search{
     width: 16px;

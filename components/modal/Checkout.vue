@@ -8,8 +8,26 @@
 				<button class="delete" aria-label="close" @click="closeModal(false)"></button>
 			</header>
 			<section class="modal-card-body">
+				
 				<div v-if="!isCheckoutSection">
 					<p v-if="products.length != 0" class="intro">{{ $t('checkout') }}</p>
+					<div class="payment-option" id="payment-option">
+						<ul>
+							<li class="aur" href="#" @click="copyAur"><img src="/images/aur.png" alt="Aur"><img src="/images/kass.png" alt="Kass"><input v-on:focus="$event.target.select()" ref="aur" readonly :value="aurNum"/><button>copy</button></li>
+							<li class="bank" href="#" @click="copyISB"><img src="/images/isb.png" alt="ISB"><input v-on:focus="$event.target.select()" ref="isb" readonly :value="isbNum"/><button>copy</button></li>
+							<li class="bnb" href="#" @click="copyBNB"><img src="/images/bnb.png" alt="BNB"><input v-on:focus="$event.target.select()" ref="bnb" readonly :value="bnbNum"/><button>copy</button></li>
+							<li class="eth" href="#" @click="copyETH"><img src="/images/ethereum.png" alt="ETH"><input v-on:focus="$event.target.select()" ref="eth" readonly :value="ethNum"/><button>copy</button></li>
+							<!--<li class="kass"><a href="#" v-on:click="paymentInfo = 'Kass to : 858 1884'"><img src="/images/kass.png" alt="Kass">858 1884</a></li>
+							<li class="bank"><a href="#" v-on:click="paymentInfo = 'Transfer to : 515-26-1108 / 110879-3269'"><img src="/images/isb.png" alt="Millifæra">515-26-1108 / 110879-3269</a></li>
+							<li class="ethereum"><a href="#" v-on:click="paymentInfo = 'Aur amount to : 858 1884'"><img src="/images/ethereum.png" alt="Ethereum"></a></li>
+							<li class="bnb"><a href="#" v-on:click="paymentInfo = 'Aur amount to : 858 1884'"><img src="/images/bnb.png" alt="BNB"></a></li>
+							<li class="bitcoin"><a href="#" v-on:click="paymentInfo = 'Aur amount to : 858 1884'"><img src="/images/bitcoin.png" alt="Bitcoin"></a></li>
+							-->
+						</ul>
+						 
+					</div>
+					
+					<p class="payment-info">{{paymentInfo}}</p>
 					<div class="product" v-for="product in products" :key="product.id">
 						
 						<p>{{product.quantity}} x {{ product.title }}</p>
@@ -45,8 +63,15 @@ export default {
 			removeLabel: 'Remove',
 			cartEmptyLabel: 'Your cart is empty',
 			closeLabel: 'Close',
-			isCheckoutSection: false
+			isCheckoutSection: false,
+			paymentInfo: '...',
+			aurNum: '8581884',
+			kassNum: '8581884',
+			isbNum: '515-26-1108 / 110879-3269',
+			bnbNum: '0x764Aa76E34F6636810f8B83a6D204007DC4c2a52',
+			ethNum: '0x764Aa76E34F6636810f8B83a6D204007DC4c2a52'
 		}
+		
 	},
 
 	computed: {
@@ -119,6 +144,26 @@ export default {
 		},
 		onPrevBtn () {
 			this.isCheckoutSection = false;
+		},
+		copyAur() {
+			this.$refs.aur.focus();
+			document.execCommand('copy');
+		},
+		copyKass() {
+			this.$refs.kass.focus();
+			document.execCommand('copy');
+		},
+		copyISB() {
+			this.$refs.isb.focus();
+			document.execCommand('copy');
+		},
+		copyETH() {
+			this.$refs.eth.focus();
+			document.execCommand('copy');
+		},
+		copyBNB() {
+			this.$refs.bnb.focus();
+			document.execCommand('copy');
 		}
 	}
 }
@@ -147,4 +192,38 @@ export default {
 	  border-bottom: 1px solid #ccc;
 	  padding: 5px;
   }
+  .payment-option img {
+    width: 40px;
+	}
+	
+
+	.payment-option img {
+		margin: 5px 10px 5px 0;
+	}
+	.payment-info {
+		text-align: center;
+		margin-bottom: 10px;
+		font-weight: 600;
+
+	}
+	.payment-option input {
+		width: 80%;
+    	font-size:18px;
+	}
+	.payment-option button{
+		font-size: 18px;
+	}
+
+.payment-option ul {
+		display: flex;
+    flex-direction: column;
+    
+	}
+.payment-option ul li{
+		display: flex;
+    align-items: center;
+	justify-content: space-evenly;
+	}
+
+
   </style>

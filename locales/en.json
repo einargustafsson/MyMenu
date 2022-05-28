@@ -1,10 +1,10 @@
 {
-    "intro": "Add items to the cart \n we'll come and take your order",
+    "intro": "Add items to the cart \n you will find payment options in the cart",
     "all": "All",
     "yourorder": "Your order",
-    "checkout": "Sit tight or give us a nod and we'll come and take your order",
+    "checkout": "Choose your payment method",
     "remove": "Remove",
     "totalof": "Total of",
-    "cartEmptyLabel": "Did you see something you like? We'll be right over to take your order"
+    "cartEmptyLabel": "Add the items to you cart to see your total"
 }
   

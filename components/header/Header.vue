@@ -103,9 +103,9 @@
 <style lang="scss" scoped>
   
   .header {
-    background: url('/images/loki.png') no-repeat;
+    background: url('/images/austo_logo.png') no-repeat;
     background-position: 10px 10px;
-    background-size: 75px;
+    background-size: 275px;
     padding-left: 105px;
     height:65px;
     padding-top: 5px;

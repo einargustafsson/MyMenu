@@ -3,10 +3,9 @@
     <div class="columns container">
       
     <div class="column has-text-center">
-      <h2>Please leave a review</h2>
+      <h2>Vorhátið Austurbæjarskóla</h2>
       <ul>
-        <li><a href="https://www.tripadvisor.com/Restaurant_Review-g189970-d1960952-Reviews-Cafe_Loki-Reykjavik_Capital_Region.html" target="_blank">Tripadvisor</a></li>
-        <li><a href="https://facebook.com/cafeloki" target="_blank">Facebook</a></li>
+        <li><a href="https://beautyvsfunction.com" target="_blank">Site and payments handled by Einar</a></li>
         </ul>
       
     </div>
